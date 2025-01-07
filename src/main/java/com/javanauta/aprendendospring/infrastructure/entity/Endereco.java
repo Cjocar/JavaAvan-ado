@@ -7,22 +7,22 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Getter
-    @Setter
-    @AllArgsConstructor
-    @NoArgsConstructor
-    @Entity
-    @Table(name = "endereco")
-    public class Endereco {
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@Entity
+@Table(name = "endereco")
+public class Endereco {
 
         @Id
         @GeneratedValue(strategy = GenerationType.IDENTITY)
-        private long id;
+        private Long id;
 
-        @Column(name = "rua")
+        @Column(name = "rua", length = 100)
         private String rua;
 
-        @Column(name = "numero")
-        private long numero;
+        @Column(name = "numero", length = 100)
+        private String numero;
 
         @Column(name = "complemento", length = 100)
         private String complemento;
